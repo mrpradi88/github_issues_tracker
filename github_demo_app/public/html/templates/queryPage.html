@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6">
+            <div class="panel panel-primary">
+                <div class="panel panel-heading">
+                    <h1 class="panel-title"><h3>Enter the repository Name</h3></h1>
+                </div>
+                <div class="panel-body">
+                   <form>
+                       <div class="input-group" >
+                       <input type="text" class="form-control" placeholder="Repository Link" name="repoLink" ng-model="query.newRepo.repoLink" >
+                       <span class="input-group-btn" >
+                           <button class="btn btn-primary" type="button" ng-click="query.sendLink()" > Submit </button>
+                       </span>
+                       </div>
+                   </form>
+                    <div class="row" ng-show="query.progressFlag" >
+                        <div class="col-lg-12">
+                            <img class="" ng-src="/images/spinner.gif">
+                            <h3>Please wait... while we fetch the records...</h3>
+                        </div>
+                    </div>
+                    <div ng-show="!query.progressFlag">
+                    <div class="well"  ng-show="query.gotRepos" >Select a category to see the issues.
+                        <span>
+                            <label>Select criteria.</label>
+                            <select name="criteria" ng-model="query.crite">
+                                <option value="open">Number of open issues.</option>
+                                <option value="oneday">Last 24 hours issues.</option>
+                                <option value="sevenday">Last 7 day issues.</option>
+                                <option value="morethanseven">Issues more than seven days ago.</option>
+                            </select><br>
+
+                        </span>
+                    </div>
+                    <div ng-show="query.gotRepos" >
+                    <div class="well" ng-repeat="cate in query.issuesList">
+                        <a ng-href="#/getissues/{{query.newRepo.repoLink}}/{{cate}}/{{query.crite}}" >{{cate}}</a>
+
+                    </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3"></div>
+    </div>
+</div>

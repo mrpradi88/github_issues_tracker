@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body ng-app="gitApp">
+<div class="container">
+    <div class="row">
+       <div class="col-lg-10">
+           <div class=" well well-sm">
+               <h1>Github repository issues viewer.</h1>
+
+           </div>
+       </div>
+        <div class="col-lg-2">
+            <div class="pull-right " ><a ng-href="#/" ><button><span class="glyphicon glyphicon-home"></span><h3>Go To Home</h3></button></a></div>
+        </div>
+    </div>
+
+
+</div>
+<div ng-view>
+
+</div>
+<script src="/lib/jquery/dist/jquery.min.js"></script>
+<script src="/lib/bootstrap/dist/js/bootstrap.js"></script>
+<script src="/lib/angular/angular.min.js"></script>
+<script src="/lib/angular-route/angular-route.min.js"></script>
+<script src="/javascripts/app.js"></script>
+<script src="/javascripts/Service/dataService.js"></script>
+<script src="/javascripts/controllers/queryController.js"></script>
+<script src="/javascripts/controllers/issueController.js"></script>
+
+
+</body>
+</html>
