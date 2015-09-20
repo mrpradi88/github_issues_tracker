@@ -5,8 +5,9 @@ Implementation:-
 This application is implemented in Node.js,Express.js,Angular.js,Bootstrap and with some other utility modules with Node.js
 Here am not using any api(library) to communicate with GitHub but i have used REST URL to communicate with Git by some request module.
 
-It is not a fully fledged application but required functionality is working fine....
+It is not a fully fledged application but required functionality is working fine.
 
-Application Live URL:githubissuestracker-techgeek.rhcloud.com
+Application Live URL: githubissuestracker-techgeek.rhcloud.com
+
 
 
