@@ -9,7 +9,7 @@
                 <div class="panel-body">
                    <form>
                        <div class="input-group" >
-                       <input type="text" class="form-control" placeholder="Repository Link" name="repoLink" ng-model="query.newRepo.repoLink" >
+                       <input type="text" class="form-control" placeholder="Repository Name eg:'shippable','jquery'" name="repoLink" ng-model="query.newRepo.repoLink" >
                        <span class="input-group-btn" >
                            <button class="btn btn-primary" type="button" ng-click="query.sendLink()" > Submit </button>
                        </span>
@@ -28,7 +28,7 @@
                             <select name="criteria" ng-model="query.crite">
                                 <option value="open">Number of open issues.</option>
                                 <option value="oneday">Last 24 hours issues.</option>
-                                <option value="sevenday">Last 7 day issues.</option>
+                                <option value="sevenday">Last 7 day issues and not less than 24 hours.</option>
                                 <option value="morethanseven">Issues more than seven days ago.</option>
                             </select><br>
 
@@ -44,6 +44,23 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-3"></div>
+        <div class="col-lg-3">
+
+                <div class="panel panel-primary">
+                    <div class="panel panel-heading">
+                        <h1 class="panel-title"><h3>Follow the instructions.</h3></h1>
+                    </div>
+                    <div class="panel-body">
+                        <ul>
+                            <li><h4>This is not a fully fledged Application</h4></li>
+                            <li> <h5>1.First enter the repository name.eg:'shippable'</h5></li>
+                            <li> <h5>2.select the criteria first before clicking on categories link</h5></li>
+                            <li> <h5>3.Then click the category link you will find related result.</h5></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+        </div>
     </div>
 </div>
